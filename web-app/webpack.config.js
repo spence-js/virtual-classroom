@@ -2,14 +2,20 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+	entry: 'index.js',entry: path.resolve(__dirname, 'src', 'index.js'),
 	output: {
-		path: path.resolve(__dirname, 'build'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
+	},
+	devServer: {
+		contentBase: path.resolve(__dirname, 'dist'),
+		publicPath: '/dist',
+		port: 9000
 	},
 	resolve: {
 		modules: [path.join(__dirname, 'src'), 'node_modules'],
 		alias: {
-			react: path.join(__dirname, 'node_modules', 'react'),
+		react: path.join(__dirname, 'node_modules', 'react'),
 		},
 	},
 	module: {
@@ -24,12 +30,12 @@ module.exports = {
 		{
 			test: /\.css$/,
 			use: [
-				{
-					loader: 'style-loader',
-				},
-				{
-					loader: 'css-loader',
-				},
+			{
+				loader: 'style-loader',
+			},
+			{
+				loader: 'css-loader',
+			},
 			],
 		},
 		],
@@ -38,5 +44,5 @@ module.exports = {
 		new HtmlWebPackPlugin({
 			template: './src/index.html',
 		}),
-	],
+	]
 };
