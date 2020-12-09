@@ -14,10 +14,6 @@ module.exports = {
 		historyApiFallback: true
 	},
 	resolve: {
-		modules: [path.join(__dirname, 'src'), 'node_modules'],
-		alias: {
-			react: path.join(__dirname, 'node_modules', 'react'),
-		},
 		extensions: [".ts", ".tsx", ".js", ".jsx"]
 	},
 	module: {
