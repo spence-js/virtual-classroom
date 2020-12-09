@@ -1,8 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Host from './Components/Pages/Host/Host.js'
-import Participant from './Components/Pages/Participant/Participant.js'
+import Host from './Components/Pages/Host/Host'
+import Participant from './Components/Pages/Participant/Participant'
 
 export default (
     <Switch>
