@@ -18,22 +18,15 @@ module.exports = {
 	},
 	module: {
 		rules: [
-		{
-			test: /\.tsx?$/,
-			use: 'babel-loader',
-			exclude: /node_modules/,
-		},
-		{
-			test: /\.css$/,
-			use: [
 			{
-				loader: 'style-loader',
+				test: /\.tsx?$/,
+				use: 'babel-loader',
+				exclude: /node_modules/,
 			},
 			{
-				loader: 'css-loader',
+				test: /\.scss$/,
+			use: ["style-loader", "css-loader", "sass-loader"]
 			},
-			],
-		},
 		],
 	},
 	plugins: [
