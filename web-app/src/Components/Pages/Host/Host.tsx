@@ -7,7 +7,7 @@ const Host = () => {
     const [example, setExample] = useState('what does the server say?')
 
     const sendGet = () => {
-        axios.get('http://localhost:8080/getHello')
+        axios.get('/api/getHello')
             .then((response) => {
                 setExample(response.data)
             })
