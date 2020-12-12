@@ -3,9 +3,9 @@ virtual classrooms that give teachers more data about the engagement of their st
 
 
 ## Technologies used
-TypeScript
-React (with Hooks!)
-Node.js
-Express
-Webpack
-SCSS
+* TypeScript
+* React (with Hooks!)
+* Node.js
+* Express
+* Webpack
+* SCSS
