@@ -4,9 +4,9 @@
 	"main": "build/index.js",
 	"license": "MIT",
 	"scripts": {
+		"watch": "nodemon",
 		"build": "tsc",
-		"start": "node ./build/index.js",
-		"watch": "nodemon"
+		"start": "node ./build/index.js"
 	},
 	"dependencies": {
 		"dotenv": "^8.2.0",
